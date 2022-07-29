@@ -23,7 +23,7 @@ class Kegiatan_model extends CI_Model
 
         $this->datatables->add_column('action', anchor(site_url('kegiatan/update/$1'),'Update')." | ".anchor(site_url('kegiatan/delete/$1'),'Delete','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_kegiatan');
 
-        $this->datatables->add_column('gambar', "<img width='50' src='./assets/upload/$1'>", 'gambar_kegiatan');
+        $this->datatables->add_column('gambars', "<img width='50' src='./assets/upload/$1'>", 'gambar_kegiatan');
 
 
         return $this->datatables->generate();

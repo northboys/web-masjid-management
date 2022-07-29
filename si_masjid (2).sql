@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2022 at 04:13 PM
+-- Generation Time: Jul 29, 2022 at 03:43 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,29 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id_admin` int(11) NOT NULL,
-  `nama_admin` varchar(100) NOT NULL,
-  `username_admin` varchar(50) NOT NULL,
-  `password_admin` varchar(255) NOT NULL,
-  `level_admin` int(11) NOT NULL COMMENT '1 : super admin\r\n2 : sekretaris\r\n3 : bendahara'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id_admin`, `nama_admin`, `username_admin`, `password_admin`, `level_admin`) VALUES
-(2, 'Sekretaris', 'Sekretaris', 'Sekretaris', 2),
-(3, 'Asni', 'Asni', 'Asni', 1),
-(4, 'Bendahara', 'Bendahara', 'Bendahara', 3);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `baru`
 --
 
@@ -61,6 +38,29 @@ CREATE TABLE `baru` (
 
 INSERT INTO `baru` (`id`, `nama_baru`) VALUES
 (1, '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_user`
+--
+
+CREATE TABLE `data_user` (
+  `id_user` int(11) NOT NULL,
+  `nama_user` varchar(100) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `level` int(11) NOT NULL COMMENT '1 : super admin\r\n2 : sekretaris\r\n3 : bendahara'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data_user`
+--
+
+INSERT INTO `data_user` (`id_user`, `nama_user`, `username`, `password`, `level`) VALUES
+(3, 'Asni', 'Asni', 'Asni', 1),
+(4, 'Bendahara', 'Bendahara', 'Bendahara', 3),
+(5, 'Sekretaris', 'Sekretaris', 'Sekretaris', 2);
 
 -- --------------------------------------------------------
 
@@ -149,16 +149,16 @@ INSERT INTO `kegiatan` (`id_kegiatan`, `id_kategori`, `nama_kegiatan`, `waktu_ke
 --
 
 --
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id_admin`);
-
---
 -- Indexes for table `baru`
 --
 ALTER TABLE `baru`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `data_user`
+--
+ALTER TABLE `data_user`
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- Indexes for table `kas_masjid`
@@ -189,16 +189,16 @@ ALTER TABLE `kegiatan`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT for table `baru`
 --
 ALTER TABLE `baru`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `data_user`
+--
+ALTER TABLE `data_user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `kas_masjid`

@@ -13,7 +13,7 @@
           </div>
           <div>
             <p class="statistics-title">Hak Akses</p>
-            <h3 class="rate-percentage"><?= $admin ?></h3>
+            <h3 class="rate-percentage"><?= $data_user ?></h3>
           </div>
         </div>
       </div>

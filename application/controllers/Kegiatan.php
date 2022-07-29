@@ -11,6 +11,9 @@ class Kegiatan extends CI_Controller
     $this->load->model('Kegiatan_model');
     $this->load->library('form_validation');        
     $this->load->library('datatables');
+    if (empty($this->session->userdata('id_user'))) {
+      redirect('login');
+    }
   }
 
   public function index()
@@ -92,14 +95,6 @@ class Kegiatan extends CI_Controller
 
           // $this->load->view('imageupload_success', $data);
       }
-
-      $konfig['upload_path'] = './assets/upload/';
-      $konfig['allowed_types'] = 'gif|jpg|png|pdf';
-      $konfig['max_size'] = 2000;
-
-
-     
-
 
       $data = array(
         'id_kategori' => $this->input->post('id_kategori',TRUE),

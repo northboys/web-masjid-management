@@ -27,20 +27,10 @@
                     <input type="date" class="form-control" name="waktu_kegiatan" id="waktu_kegiatan" placeholder="Waktu Kegiatan" value="<?php echo $waktu_kegiatan; ?>" />
                 </div>
                 <div class="form-group">
-                    <label for="varchar">Gambar Kegiatan </label>
+                    <label for="varchar">Gambar Kegiatan <?php echo form_error('gambar_kegiatan') ?></label>
                     <input type="file" class="form-control" name="gambar_kegiatan" id="gambar_kegiatan" placeholder="Gambar Kegiatan" value="<?php echo $gambar_kegiatan; ?>" />
                 </div>
 
-                <!-- <div class="form-group">
-                      <label>Gambar Kegiatan <?php echo form_error('gambar_kegiatan') ?></label>
-                      <input type="file" name="gambar_kegiatan" class="file-upload-default" id="gambar_kegiatan" placeholder="Gambar Kegiatan" value="value="<?php echo $gambar_kegiatan; ?>" />
-                      <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                        <span class="input-group-append">
-                          <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                        </span>
-                      </div>
-                    </div> -->
 
                 <div class="form-group">
                     <label for="keterangan_kegiatan">Keterangan Kegiatan <?php echo form_error('keterangan_kegiatan') ?></label>

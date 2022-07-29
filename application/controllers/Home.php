@@ -13,7 +13,7 @@ class Home extends CI_Controller {
 	{
 		$data['pemasukan'] = $this->mmasjid->getPemasukan()->row_array();
 		$data['pengeluaran'] = $this->mmasjid->getPengeluaran()->row_array();
-		$data['admin'] = $this->db->get('admin')->num_rows();
+		$data['data_user'] = $this->db->get('data_user')->num_rows();
 
 		$this->load->view('template/header');
 		$this->load->view('home/home', $data);
