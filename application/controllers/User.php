@@ -17,6 +17,10 @@ class User extends CI_Controller {
 		$this->load->view('user/detail', $data);
 	}
 
+	
+
+	
+
 }
 
 /* End of file User.php */

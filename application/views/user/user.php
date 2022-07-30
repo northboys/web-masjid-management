@@ -48,7 +48,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="<?php echo base_url('/'); ?>">Home</a></li>
           <li><a class="nav-link scrollto" href="#about-us">Profil</a></li>
           <!-- <li><a class="nav-link scrollto" href="#features">Features</a></li>
           <li><a class="nav-link scrollto" href="#screenshots">Screenshots</a></li>
@@ -72,7 +72,8 @@
               <li><a href="#">Sosial</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#donasi">Donasi</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo base_url('/donasi/donasi'); ?>">Donasi</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo base_url('/feedback/register'); ?>">Feedback</a></li>
           <li><a class="nav-link scrollto" href="#contact">Hubungi Kami</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -112,7 +113,9 @@
       <!-- <h2>Website Masjid Abu Dzar Al-Ghifari &amp; Malang</h2> -->
       <!-- <h2>Website Masjid Abu Dzar Al-Ghifari Malang</h2> -->
       <!-- <h1>SELAMAT DATANG DI WEBSITE</h1> -->
-      <img src="assets/user/img/bg-masjid1.png"  data-aos-delay="100">
+      <p class="text-over-img">Text Over Image</p> 
+      <div class="hero-centered">Centered sajsjasalsalskalskasalksalksalskal</div>
+      <img src="assets/user/img/bg-masjid1.png" class="img" data-aos-delay="100">
       <!-- <h1>SELAMAT DATANG DI WEBSITE</h1> -->
       <!-- <a href="#get-started" class="btn-get-started scrollto">Get Started</a> -->
       <!-- <div class="btns">
@@ -305,6 +308,8 @@
         </div>
       </div>
     </section>
+
+    
     <!-- End Features Section -->
 
     <!-- ======= Screenshots Section ======= -->
